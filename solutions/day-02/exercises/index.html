@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exercises day 02</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* #0b8070*/
+    section{
+      background-color: aqua;
+      color:black;
+      border-radius: 20px;
+      padding: 20px;
+
+      margin: 20px auto;
+    }
+
+    section h1{
+      background-color: black;
+      color: aqua;
+    }
+
+    section h3{
+      margin-top: 30px;
+    }
+
+    footer span{
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 12px;
+    }
+
+    main section{
+      width: 50%;
+    }
+    main section h1{
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+      const rootElement = document.querySelector('.root')
+
+      const titles = [
+      'Write your name in a JSX element and store it in a name variable', 
+      'Write a JSX element which displays your full name, country, title, gender, email, phone number. Use h1 for the name and p for the rest of the information and store it in a user variable',
+      'Write a footer JSX element',
+      'Create a style object for the main JSX',
+      'Create a style object for the footer and app JSX',
+      'Add more inline styles to the JSX elements',
+      'Apply different internal styles to your JSX elements',
+      'Practice how to make JSX element and injecting dynamic data(string , number, boolean, array, object)']
+
+      const myName = 'Thiago Masseno Maciel'
+
+      const ex1 = (
+        <section>
+          <h1>{titles[0]}</h1>
+          <h3>{myName}</h3>
+        </section>
+      
+      )
+
+      const user = [ 'Thiago Masseno Maciel', 'Brasil','male','thiagomasseno3@gmail.com', '+55 (85) 99221-0323'  ]
+      //const formattedUSER = user.map((i) => <h4 key={i}> {i}</h4>) //n pode h4 ficar dentro de tag <p>
+      const formattedUSERr = user.map((i) => <li key={i}> {i}</li>)
+
+      const country = 'Brasil'
+      const gender = 'male'
+      const email = 'thiagomasseno3@gmail.com'
+      const phoneNumber = '+55 (85) 99221-0323'
+
+      const ex2 = (
+        <section>
+          <h1>{titles[1]}</h1>
+          <p>
+            full name : {myName}         <br/>
+            country : {country}          <br/>
+            gender : {gender}            <br/>
+            email : {email}              <br/>
+            phoneNumber : {phoneNumber}  <br/>
+          </p>
+        </section>
+      
+      )
+
+      const ex22 = (
+        <section>
+          <h1>{titles[1]}</h1>
+          <p>
+            {formattedUSERr}
+          </p>
+        </section>
+      )
+      
+      
+      const estilofooter ={
+        backgroundColor: 'black',
+        color: 'white',
+        textAlign: 'center',
+        padding: '10px 0px',
+      }
+
+      const ex3 = (
+        <footer style={estilofooter}>
+          <span>
+            All directs reserved @copyright 2025
+          </span>
+        </footer>
+      )
+
+      const estilomain = {
+        backgroundColor: '#007777',
+        padding : '10px 20px',
+        width:'100%',
+        height:'fit-content',
+
+        display:'flex',
+        flexDirection:'column',
+        justifyItems:'center',
+        textAlign:'center',
+      }
+
+      const ex4 = (
+        <main style={estilomain}>
+          <h1 style={{backgroundColor: 'black', color: 'aqua'}} >{titles[3]}</h1>
+          <section>
+            <h3>{myName}</h3>
+          </section>
+
+          <section>
+            <h1>{titles[1]}</h1>
+            <p>
+              full name : {myName}         <br/>
+              country : {country}          <br/>
+              gender : {gender}            <br/>
+              email : {email}              <br/>
+              phoneNumber : {phoneNumber}  <br/>
+            </p>
+          </section>
+
+          <section>
+            <h1>{titles[1]}</h1>
+            
+            <ul>
+              {formattedUSERr}
+            </ul>
+            
+          </section>
+
+        </main>
+      )
+
+      const ex5 = (
+        <section style={{display:'flex' , flexDirection:'column', gap:'20px'}}>
+          <h1>{titles[4]}</h1>
+          <span 
+            style={{backgroundColor: '#007777',color:'white'}}>
+            Done: i transform what i made before in style internal css to style object css 
+          </span>
+        </section>
+      )
+
+      const estiloapp = {
+        backgroundColor: '#a9fdfd',
+        width: '100vw',
+        padding: '10% 20%'
+      }
+
+      const ex6 = (
+        <section>
+          <h1>{titles[5]}</h1>
+          <p>
+            Done : i put more inline styçes into the component with a variable ex5
+          </p>
+        </section>
+      )
+
+      const ex7 = (
+        <section>
+          <h1>{titles[6]}</h1>
+          <p>
+            Done : that was one of the first things i did when i started to respond this exercises
+          </p>
+        </section>
+      )
+
+      const title1 = 'Inject data string'
+      const title2 = 'Inject data number'
+      const title3 = 'Inject data boolean'
+      const title4 = 'Inject data array'
+      const title5 = 'Inject data object'
+
+      const array =['i ', 'am ', 'using ', 'one ', 'sentence ', 'with ', 'a ', 'lot ', 'of ', 'words ' , 'to ','inject ','array ','into ','this ','element ','JSX, ','each ','word ','as ','each ','element ','from ','that ', 'array' ]
+
+      const object = {
+        fullname: 'Thiago Masseno Maciel',
+        feature1: 'hair color black',
+        feature2: 'not so tall',
+        feature3: 'skiny',
+        feature4: 'creative',
+        gender: 'male',
+        age: '22',
+      }
+
+      const flag = 81>10?'true':'false';
+      const flag1= true
+      const flag2= false
+      const ex8 = (
+        <section>
+          <h1>{titles[7]}</h1>
+        
+          <h3>{title1}</h3> <br/>
+          <strong>this title is It self one example of inject data string</strong>
+          <h3>{title2}</h3> <br/>
+          x ** 4 it means = x*x*x*x {''} 
+          {1} + {3} ** {4} = {(3**4) + 1}
+          <h3>{title3}</h3> <br/>
+          
+          {3**4} &gt; {10} = {flag} {3**4>10?true:false}
+          {''} n
+          <h5 style={{fontWeight:'300'}} >flag1 :{flag1 && ' the variable is boolean true'}</h5 > 
+          <h5 style={{fontWeight:'300'}} >flag2 :{!flag2 && 'the variable is boolean false'} </h5 >
+
+          <h3>{title4}</h3> <br/>
+          {array}
+
+          <h3>{title5}</h3> <br/>
+          <h3>=============User=============</h3>
+          <h3>Fullname: {object.fullname}</h3>
+          <h3>Feature 1: {object.feature1}</h3>
+          <h3>Feature 2: {object.feature2}</h3>
+          <h3>Feature 3: {object.feature3}</h3>
+          <h3>Feature 4: {object.feature4}</h3>
+          <h3>Gender: {object.gender}</h3>
+          <h3>Age: {object.age}</h3>
+        
+        </section>
+      )
+
+
+
+      const app = (
+        <div className='app' style={estiloapp}>
+          {ex1}
+          {ex2}
+          {ex22}
+          {ex4}
+          {ex5}
+          {ex6}
+          {ex7}
+          {ex8}
+          {ex3}
+        </div>
+      )
+
+      // we render the JSX element using the ReactDOM package// ReactDOM has the render method and the render method takes two argument
+      ReactDOM.render(app, rootElement)
+      // or//  ReactDOM.render([header, main, footer], rootElement)</script>
+</body>
+</html>

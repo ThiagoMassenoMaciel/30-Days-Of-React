@@ -1,0 +1,278 @@
+<!--object styling -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>30 Days Of React Challenge</title>
+</head>
+<body>
+  <div class="root"></div> <!-- is the gateway to connect all react components to the index.html-->
+
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js">  </script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    //console.log(React) //colocar para executar isso para testar se o CDN esta funcionando
+    // To get the root element from the HTML document is the gateway 
+    //to connect all react components to the index.html
+    const rootElement = document.querySelector('.root')
+    
+    const jsxElement = <h1>I am a JSX element</h1>
+    // we render the JSX element using the ReactDOM package
+    // ReactDOM has the render method and the render method takes two arguments
+
+    const estilosHeader={
+      background:'yellow', 
+      color:'black' , 
+      fontWeight:'800',
+      display:'flex', 
+      flexdirection:'row', 
+      gap:'32px', 
+      justifyitems:'center',
+      textalign:'center',
+      margin: '-8px -10px',
+      padding:'0',
+      border: '10px solid orange', 
+      color: 'black', 
+      fontSize: '18px'
+    }
+
+    const header = ( //JSX element
+        <header style={estilosHeader}>
+          <h1>Welcome to 30 Days Of React</h1>
+          <h2>Started React</h2>
+          <h3>JavaScript Library</h3>
+          <p>Asabeneh Yetayeh</p>
+          <small>Oct 2, 2020</small>
+          <a style={{background:'white', color:'black'}} href="www.google.com">link</a>
+        </header>
+      )
+
+    const headerr = ( //JSX element
+      <header style={estilosHeader}>
+        <div class="header-wrapper">
+          <h1>Welcome to 30 Days Of React</h1>
+          <h2>Started React</h2>
+          <h3>JavaScript Library</h3>
+          <p>Asabeneh Yetayeh</p>
+          <small>Oct 2, 2020</small>
+          <a style={{background:'white', color:'black'}} href="www.google.com">link</a>
+        </div>
+      </header>
+    )
+
+    const welcome = 'Welcome to 30 Days Of React'
+    const titlee = 'Getting Started React'
+    const subtitle = 'JavaScript Library'
+    const authorFirstName = 'Asabeneh'
+    const authorLastName = 'Yetayeh'
+    const date = 'Oct 1, 2020'
+
+    // JSX element, headerrr
+    const headerrr = (
+      <header><div className='header-wrapper'><h1>{welcome}</h1><h2>{titlee}</h2><h3>{subtitle}</h3><p>
+            Instructor: {authorFirstName} {authorLastName}
+          </p><small>Date: {date}</small></div></header>
+    )
+
+    const headerrrr = (
+      <header style={estilosHeader}><h1>{welcome}</h1><h2>{titlee}</h2><h3>{subtitle}</h3><p>
+            Instructor: {authorFirstName} {authorLastName}
+          </p><small>Date: {date}</small></header>
+    )
+
+      const estilosMain={
+        background:'red', 
+        color:'black' , 
+        fontWeight:'400',
+        margin: '0',
+        padding:'0'
+      }
+
+      const main = ( //JSX element
+        <main style={estilosMain}>
+          <p>Prerequisite to get started react.js:</p>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <label htmlFor='firstname'>First Name</label>
+          <input type='text' id='firstname' placeholder='First Name' />
+        </main>
+      )
+
+      const title2 = 'Prerequisite to get started react.js:'
+      const requisite1 = 'HTML'
+      const requisite2 = 'CSS'
+      const requisite3 = 'JavaScript'
+      const label1 = 'FirstName'
+
+      const main2 = ( //JSX element
+      <main style={estilosMain}>
+        <p>{title2}</p>
+        <ul>
+          <li>{requisite1}</li>
+          <li>{requisite2}</li>
+          <li>{requisite3}</li>
+        </ul>
+        <label htmlFor='firstname'>{label1}</label>
+        <input type='text' id='firstname' placeholder={label1} />
+      </main>
+    )
+
+      const estilosFooter={
+        background:'blue', 
+        color:'black' , 
+        fontWeight:'200',
+        margin: '0',
+        padding:'0'
+      }
+
+      
+      const footer = ( //JSX element
+        <footer style={estilosFooter}>
+          <p>Copyright 2020</p>
+        </footer>
+      )
+
+      const direitosReservados = 'Copyright 2020'
+
+      const footerr = ( //JSX element
+        <footer style={estilosFooter}>
+          <p>{direitosReservados}</p>
+        </footer>
+      )
+
+      //wrapped all JSX elements in one element JSX
+      const app = (
+        <div>
+          {headerrrr}
+          {main}
+          {footerr}
+        </div>
+      )
+      //---------------------------------------------------
+      //Injecting a number to a JSX Element
+      const numOne = 3
+      const numTwo = 2
+      
+      const result = (
+        <strong>
+          {numOne} + {numTwo} = {numOne + numTwo}
+        </strong>
+      )
+      
+      const yearBorn = 1820
+      const currentYear = new Date().getFullYear()
+      const age = currentYear - yearBorn
+      const personAge = <strong> {age}</strong>
+
+      const exemplo = (
+        <div style={{background:'black', padding:'50px', color:'white'}}>
+          calc {result}
+          <br/>
+          I was born : {yearBorn}
+          <br/>
+          Now i am :{personAge} on the current year {currentYear}
+
+        </div>
+      )
+
+
+      //---------------------------------------------------------------------------------
+      //Injecting an array to a JSX Element
+
+      const estiloDIVmainnn = {
+        boxSizing: 'border-box',
+        padding: '0',
+        margin: '0',
+        width: '85%',
+        margin: 'auto',
+        padding: '10px',
+        margin: '2px auto',
+        fontWeight: '400',
+        textAlign: 'center',
+        lineHeight: '60px',
+      }
+
+      const techs = ['HTML', 'CSS', 'JavaScript']
+
+      // JSX element, main
+      const main3 = (
+        <main><div style={estiloDIVmainnn}><p>
+              Prerequisite to get started{' '}
+              <strong><em>react.js</em></strong>
+              :
+            </p><ul>{techs}</ul></div></main>
+      )
+
+
+      //----------------------------------------------------------------------------
+      //Injecting an object to a JSX Element
+      //we must to destructure the content of the object before we inject the data to the JSX element
+
+      const author = {
+        firstName: 'Thiago',
+        lastName: 'Maciel',
+      }
+
+      const hheader = (
+      <header style={estilosHeader}><h1>{welcome}</h1><h2>{titlee}</h2><h3>{subtitle}</h3><p>
+            Instructor: {author.firstName} {author.lastName}
+          </p><small>Date: {date}</small></header>
+      )
+
+      //-----------------------------------------------------------------------------------------
+      // Lists formatted without unique key
+      const tech = ['HTML', 'CSS', 'JavaScript']
+      const techsFormatted = tech.map((tech) => <li>{tech}</li>)
+
+      // JSX element, main
+      const main4 = (
+        <main>
+          <div style={estiloDIVmainnn}>
+            <p>
+              Prerequisite to get started{' '}
+              <strong>
+                <em>react.js</em>
+              </strong>
+              :
+            </p>
+            <ul>{tech}</ul>
+          </div>
+        </main>
+      )
+
+       //-----------------------------------------------------------------------------------------
+      // Lists formatted with unique key
+
+      const techsFormattedd = techs.map((tech) => <li key={tech}>{tech}</li>)
+      //const techsFormattedd = techs.map((tech) => <li style={{listStyle: 'none'}} key={tech}>{tech}</li>)
+
+      // JSX element, main
+      const main5 = (
+        <main>
+          <div style={estiloDIVmainnn}>
+            <p>
+              Prerequisite to get started{' '}
+              <strong>
+                <em>react.js</em>
+              </strong>
+              :
+            </p>
+            <ul>{techsFormattedd}</ul>
+          </div>
+        </main>
+      )
+
+
+      //ReactDOM.render([header, main, footer], rootElement)
+      ReactDOM.render( main5, rootElement)
+    //Remember, we can render only one JSX element at a time
+    
+  </script>
+
+</body>
+</html>

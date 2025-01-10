@@ -1,0 +1,178 @@
+<!--styling general -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>30 Days Of React Challenge</title>
+
+  <style>
+    /* == General style === */
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+      line-height: 1.5;
+      font-family: 'Montserrat';
+      font-weight: 300;
+      color: black;
+    }
+
+    .root {
+      min-height: 100%;
+      position: relative;
+    }
+
+    .header-wrapper,
+    .main-wrapper,
+    .footer-wrapper {
+      width: 85%;
+      margin: auto;
+    }
+
+    .header-wrapper,
+    .main-wrapper {
+      padding: 10px;
+      margin: 2px auto;
+    }
+
+    h1 {
+      font-size: 70px;
+      font-weight: 300;
+    }
+
+    h2,
+    h3 {
+      font-weight: 300;
+    }
+
+    header {
+      background-color: #61dbfb;
+      padding: 10px;
+    }
+
+    main {
+      padding: 10px;
+      padding-bottom: 60px;
+      /* Height of the footer */
+    }
+
+    ul {
+      margin-left: 15px;
+    }
+
+    ul li {
+      list-style: none;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      /* Height of the footer */background: #6cf;
+    }
+
+    .footer-wrapper {
+      font-weight: 400;
+      text-align: center;
+      line-height: 60px;
+    }
+  </style>
+</head>
+<body>
+  <div class="root"></div> <!-- is the gateway to connect all react components to the index.html-->
+
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js">  </script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    console.log(React)
+    // To get the root element from the HTML document is the gateway 
+    //to connect all react components to the index.html
+    const rootElement = document.querySelector('.root')
+    
+    const jsxElement = <h1>I am a JSX element</h1>
+    // we render the JSX element using the ReactDOM package
+    // ReactDOM has the render method and the render method takes two arguments
+
+    const header = ( //JSX element
+        <header>
+          <h1>Welcome to 30 Days Of React</h1>
+          <h2>Started React</h2>
+          <h3>JavaScript Library</h3>
+          <p>Asabeneh Yetayeh</p>
+          <small>Oct 2, 2020</small>
+          <a style={{background:'white', color:'black'}} href="www.google.com">link</a>
+        </header>
+      )
+
+    const headerr = ( //JSX element
+      <header>
+        <div class="header-wrapper">
+          <h1>Welcome to 30 Days Of React</h1>
+          <h2>Started React</h2>
+          <h3>JavaScript Library</h3>
+          <p>Asabeneh Yetayeh</p>
+          <small>Oct 2, 2020</small>
+          <a style={{background:'white', color:'black'}} href="www.google.com">link</a>
+        </div>
+      </header>
+    )
+
+
+      const main = ( //JSX element
+        <main>
+          <div class="main-wrapper">
+            <p>Prerequisite to get started react.js:</p>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <label htmlFor='firstname'>First Name</label>
+          <input type='text' id='firstname' placeholder='First Name' />
+          </div>
+        </main>
+      )
+
+      const footer = ( //JSX element
+        <footer>
+          <div class="footer-wrapper">
+            <p>Copyright 2020</p>
+          </div>
+        </footer>
+      )
+
+      //wrapped all JSX elements in one element JSX
+      const app = (
+        <div>
+          {headerr}
+          {main}
+          {footer}
+        </div>
+      )
+    
+
+
+      //---------------------------------------------------
+      const title = <h1 className='title'>Getting Started React</h1>
+      const inputField = (
+        <div>
+          <label htmlFor='firstname'>First Name</label>
+          <input type='text' id='firstname' placeholder='First Name' />
+        </div>
+      )
+
+      //ReactDOM.render([header, main, footer], rootElement)
+      ReactDOM.render(app, rootElement)
+    //Remember, we can render only one JSX element at a time
+  </script>
+
+</body>
+</html>
