@@ -1,0 +1,72 @@
+:root{
+  font-size: 16.5%;
+  --colorHeader:#015958;
+  --colorMain:#008F8C;
+  --colorFooter:#023535;
+  --colorText: #ffffff;
+
+  font-family: "Poiret One", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--colorText);
+  
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+
+.app{
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+/*.header-wrapped*/
+header, main, footer{
+  padding: 30px;
+}
+
+header{
+  background-color: var(--colorHeader);
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 20px;
+
+ 
+}
+
+/*.main-wrapped*/
+
+main{
+  background-color: var(--colorMain);
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.user-card img{
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+}
+/*.footer-wrapped*/
+
+footer{
+  background-color: var(--colorFooter);
+  font-family: inherit;
+
+  text-align: center;
+  font-size: 16px;
+
+  height: 100%;
+  padding: 36px;
+
+  margin: 0px;
+}

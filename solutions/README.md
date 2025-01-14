@@ -1,0 +1,1 @@
+# Paleta de cores da adobe [link](https://color.adobe.com/pt/explore/)
