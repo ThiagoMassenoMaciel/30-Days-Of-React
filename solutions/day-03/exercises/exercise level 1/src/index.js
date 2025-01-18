@@ -30,38 +30,38 @@ const app = (
         </p>
         <section style={{backgroundColor:'#EF652A' , color:'white'}}>
           <img style={{width:'30%', height:'30%'}} src={html} alt='tech'></img>
-          <p>
+        
             <ul>
               {Html5formattted }
             </ul>
-          </p>
+          
         </section>
 
         <section style={{backgroundColor:'#34A8DB'}}>
           <img style={{width:'30%', height:'30%'}} src={css} alt='tech'></img>
-          <p>
+        
             <ul>
               {Css3formatted}
             </ul>
-          </p>
+          
         </section>
 
         <section  style={{backgroundColor:'#FFDA3E'}}>
           <img style={{width:'30%', height:'30%'}} src={js} alt='tech'></img>
-          <p>
+        
             <ul>
               {JavaScriptFORMATTED}
             </ul>
-          </p>
+          
         </section>
 
         <section  style={{backgroundColor:' #62DAFB'}}>
           <img style={{width:'30%', height:'30%'}} src={react} alt='tech'></img>
-          <p>
+        
             <ul>
               {ReacttFORMATTED}
             </ul>
-          </p>
+          
         </section>
 
       </div>

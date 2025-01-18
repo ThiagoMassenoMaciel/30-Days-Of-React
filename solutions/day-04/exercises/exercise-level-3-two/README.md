@@ -9,7 +9,7 @@
 # 🛠️ Construído com as tecnologias
 #### html5
 #### css3
-#### React
+#### React  + Vite
 
 # 📌Aprendizados 
 #### Usar fragmentos quando for criar um componente react
