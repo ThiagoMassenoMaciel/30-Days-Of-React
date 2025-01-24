@@ -1,0 +1,63 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app{
+  width: 100%;
+  height: fit-content;
+}
+
+header{
+  width: 100%;
+  text-align: center;
+}
+
+header h1{
+  font-size: 40px;
+  font-weight: larger;
+}
+
+header p{
+  font-size: 30px;
+  line-height: 15px;
+}
+
+header, .block{
+  font-family: "Abel", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+main{
+  margin: auto 10%;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  
+}
+
+main .block{
+
+  border: 2px solid #ffffff;
+
+  color: #ffffff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-size: 25px;
+  font-weight: 200;
+}

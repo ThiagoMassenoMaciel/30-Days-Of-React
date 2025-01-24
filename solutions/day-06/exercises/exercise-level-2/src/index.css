@@ -1,0 +1,76 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  --color:#ffffff;
+  --bgColor: #242424;
+  --prime: #ff0101;
+  --odds : #ffff00;
+  --even : #00ff0d;
+
+  --block: 118px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root{
+  width: 100%;
+}
+
+body{
+  background-color: var(--color);
+  padding: 0px;
+  text-align: center;
+}
+
+header h1{
+  font-family: "Pacifico", serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 50px;
+}
+
+.app{
+  height: fit-content;
+  flex: 1;
+  padding: 0px 10%;
+
+  text-align: center;
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px;
+  align-items: center;
+  width: fit-content;
+  justify-content: center;
+  
+
+  margin: 0 auto;
+}
+
+.block{
+  padding: 0px;
+  width: var(--block);
+  height: var(--block);
+
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  place-content: center;
+
+  color: var(--color);
+  border: 2px solid var(--color);
+
+  font-size: 40px;
+}
+
+
+
