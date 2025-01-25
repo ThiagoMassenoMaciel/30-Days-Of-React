@@ -306,7 +306,7 @@ const App2 = () => {
 }
 
 
-//======================= use destructuring the hole object for the rest class component 
+//======================= use destructuring the hole object for all the rest class components
 
 // TechList Component class base component
 class TechList1 extends React.Component {

@@ -1,0 +1,112 @@
+:root {
+  color-scheme: light dark;
+
+  font-family: "Gruppo", serif;
+  font-weight: 300;
+  font-style: normal;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color00: #000;
+  --color0: #ffffff;
+  --color1: #61dbfb;
+  --color2: #0F172A;
+}
+
+html{
+  width: 100%;
+}
+body{
+  height: 100%;
+  width: 100%;
+}
+body, .app{
+  margin: 0px;
+  padding: 0px;
+}
+
+.app{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+header{
+  background-color: var(--color1);
+  height: fit-content;
+
+}
+
+header h1, header h2, header h3{
+  margin: 0px;
+  padding: 0px;
+
+
+}
+
+header h2, header h3{
+  font-weight: 200;
+}
+
+header p{
+  margin: 0px;
+  padding: 0px;
+}
+
+header h1{
+  font-size: 70px;
+  font-family: "Gruppo", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.header-wrapper small{
+  padding-bottom: 20px;
+
+}
+
+header, main{
+  padding: 20px 8%;
+}
+
+main{
+  height: 100%;
+}
+
+.main-wrapper p{
+  margin: 0px;
+}
+
+.main-wrapper button:hover{
+  scale: 0.8;
+}
+
+footer{
+
+  text-align: center;
+
+  background-color: var(--color1);
+  margin: 0px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+
+  flex: 1;
+
+  height: 30px;
+
+}
+
+.user-card p{
+  font-size: 20px;
+
+  padding: 0px;
+  margin: 0px;
+}
