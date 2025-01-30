@@ -1,0 +1,47 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  --color0: rgba(255, 255, 255, 0.975);
+  --color1: #00aaff; /* morning*/
+  --color2: #fff700; /* noon*/
+  --color3: #ff9500; /* evening*/
+  --color4: #242424; /* night */
+  --color5: #0dff00; /* afternoon*/
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  color: var(--color0);
+  background-color: #cdffee;
+}
+
+.app{
+  text-align: center;
+}
+
+.app button{
+  border: 0px;
+  border-radius: 20px;
+  width: fit-content;
+  height: fit-content;
+
+  padding: 20px 40px;
+
+  background-color: black;
+  color: var(--color0);
+  font-size: 30px;
+  font-weight: larger;
+}
+
+main{
+  width: 100%;
+  text-align: center;
+  height: 200px;
+}
+

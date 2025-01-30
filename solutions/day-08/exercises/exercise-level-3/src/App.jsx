@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes, { object } from 'prop-types';
+import PropTypes from 'prop-types';
 
 import brazil from './img/brazil.png';
 import usa from './img/usa.jpeg';

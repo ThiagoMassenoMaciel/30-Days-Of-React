@@ -1,0 +1,25 @@
+:root {
+  color-scheme: light dark;
+
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color00: #000;
+  --color0: #ffffff;
+  --color1: #61dbfb;
+  --color2: #0F172A;
+  --colorSECTION: #545454;
+}
+
+header{
+  font-family: "Gruppo", serif;
+  font-weight: 600;
+  font-style: normal;
+  background-color: var(--color1);
+  color: var(--color0);
+  
+}
